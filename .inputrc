@@ -1,0 +1,8 @@
+#scroll through bash history with the up and down arrows
+#searches partial matches also, so $ <UP> goes to the previous command but
+# $s<UP> searches through history entries that start with s
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+
+#add a trailing '/' when tab completing a symlink
+set mark-symlinked-directories on
