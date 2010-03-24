@@ -51,3 +51,13 @@ fi
 if [ -f ~/.bc_aliases ]; then
     . ~/.bc_aliases 
 fi
+
+#from vlad
+SSHAFILE=/tmp/.$(whoami)-ssha
+if [ -f $SSHAFILE ]; then
+    . $SSHAFILE
+else
+    eval `ssh-agent |head -n 2| tee $SSHAFILE`
+    chmod 600 $SSHAFILE
+fi
+
