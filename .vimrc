@@ -86,5 +86,9 @@ map <C-l> <C-W>l
 "nmap H :s/\v(\S{8})/\1 /g<CR>:s/\v((\S{8} ){8})/\1<C-V><CR>/g<CR>:nohl<CR>
 "map <space> /
 "map <c-space> ?
+"p4 convenience bindings
+nnoremap @p4a :!p4 add %:e
+nnoremap @p4e :!p4 edit %:e
+nnoremap @p4d :!p4 diff %
 "}
 
