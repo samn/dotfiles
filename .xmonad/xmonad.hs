@@ -28,7 +28,7 @@ import qualified Data.Map        as M
 -- certain contrib modules.
 --
 --myTerminal      = "xterm"
-myTerminal      = "terminal"
+myTerminal      = "sakura"
  
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
