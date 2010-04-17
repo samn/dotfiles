@@ -20,6 +20,9 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageHelpers
 import Data.Monoid
 import System.Exit
+
+import XMonad.Prompt
+import XMonad.Prompt.Ssh
  
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -245,6 +248,8 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
+    , resource  =? "xwrits"       --> doIgnore --ignore xwrits alerts by default
+                                               --so breaks don't start with spawn
     , isFullscreen                  --> doFullFloat]
  
 ------------------------------------------------------------------------
