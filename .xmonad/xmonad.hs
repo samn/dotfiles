@@ -20,6 +20,9 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders 
 
+import XMonad.Prompt
+import XMonad.Prompt.Shell
+
 import Data.Monoid
 import System.Exit
 
@@ -142,6 +145,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
  
     -- Deincrement the number of windows in the master area
     , ((modm .|. shiftMask, xK_period), sendMessage (IncMasterN (-1)))
+
+    --Open the shell prompt
+    --, ((modm, xK_p), shellPrompt myXPConfig)
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
@@ -318,6 +324,9 @@ myPP = defaultPP { ppCurrent = xmobarColor "#AFAF87" "" . wrap "<" ">"
 
 -- Keybinding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+
+--XMonad.Prompt configuration
+myXPConfig = defaultXPConfig { position = Top }
 
 -- Main configuration, override the defaults to your liking.
 myConfig = defaults 

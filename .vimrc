@@ -71,12 +71,19 @@ nmap <C-E> <End>
 nmap <C-M> gt
 nmap <C-N> gT
 nmap <C-\> <esc>:noh<cr>
-map <right> <ESC>:bn<RETURN>
 map <up> <ESC>:NERDTreeToggle<RETURN>
 "map <right> <ESC>:Tlist<RETURN>"for tag list
+map <right> <ESC>:bn<RETURN>
 map <left> <ESC>:bp<RETURN>
-map <F2> :set paste<cr>
+
+"bindings for controlling pastemode
+"<F2> to start, <F3> to cancel.  works in insert mode as well.
+map <F2> :set paste<cr> :startinsert<cr>
+imap <F2> <Esc> :set paste<cr> :startinsert<cr>
 map <F3> :set nopaste<cr>
+imap <F3> <nop>
+set pastetoggle=<F3>
+
 "quicker window navigation:
 map <C-j> <C-W>j
 map <C-k> <C-W>k
