@@ -1,2 +1,2 @@
 xwrits typetime=5 breaktime=1 +breakclock +mouse +top after=1 breaktime=2  +lock &
-xwrits typetime=30 breaktime=10 flashtime=.5 +breakclock +mouse +top after=3 breaktime=13 +finger +lock &
+xwrits typetime=30 breaktime=10 flashtime=5 +breakclock +mouse +top after=3 breaktime=13 +finger +lock &
