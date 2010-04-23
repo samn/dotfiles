@@ -5,6 +5,8 @@ colors darkblue
 set backup " make backup files
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp " directory to place swap files in
+set tags+=~/.jdktags
+set tags+=~/.bctags
 syntax on
 
 "general{
