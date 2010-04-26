@@ -77,6 +77,8 @@ map <up> <ESC>:NERDTreeToggle<RETURN>
 "map <right> <ESC>:Tlist<RETURN>"for tag list
 map <right> <ESC>:bn<RETURN>
 map <left> <ESC>:bp<RETURN>
+"sick of hitting K by accident
+map K <nop>
 
 "bindings for controlling pastemode
 "<F2> to start, <F3> to cancel.  works in insert mode as well.
