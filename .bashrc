@@ -28,7 +28,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 #path and envvars
-export PATH=$PATH:/usr/local/jdk/bin/:/home/sneubardt/brightcove/work/tt/tools/ant/1.7.1/bin:/usr/local/p4/bin:/usr/local/flex/bin:/home/sneubardt/scriptorium:/home/sneubardt/brightcove/work/depot/users/brightcove/bin:/usr/local/bin:/opt/NX/bin
+export PATH=$PATH:/usr/local/jdk/bin/:/usr/local/flex/bin:/home/sneubardt/scriptorium:/usr/local/bin:/opt/NX/bin
 
 #colorize less output, nice for man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -52,9 +52,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases 
 fi
 
-#brightcove specific aliases
-if [ -f ~/.bc_aliases ]; then
-    . ~/.bc_aliases 
+#brightcove specific stuff 
+if [ -f ~/.bc_bashrc ]; then
+    . ~/.bc_bashrc 
 fi
 
 SSHAFILE=/tmp/.$(whoami)-ssha
