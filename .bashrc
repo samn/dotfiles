@@ -44,6 +44,7 @@ export JAVA_HOME=/usr/local/jdk/
 
 #so p4 automatically picks up the correct client
 export P4CONFIG=p4config.txt
+export P4DIFF=vimdiff
 
 export EDITOR=vim
 

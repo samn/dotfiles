@@ -1,4 +1,7 @@
-"help from http://www.vi-improved.org/vimrc.php
+"help from http://www.vi-improved.org/vimrc.php, http://github.com/dakrone/dakrone-dotfiles/blob/master/.vimrc
+set modelines=0                  " no modelines [http://www.guninski.com/vim1.html]
+let g:secure_modelines_verbose=0 " securemodelines vimscript
+let g:secure_modelines_modelines = 15 " 15 available modelines
 set nocompatible " explicitly get out of vi-compatible mode
 set noexrc " don't use local version of .(g)vimrc, .exrc
 colors darkblue
