@@ -28,7 +28,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 #path and envvars
-export PATH=$PATH:/usr/local/jdk/bin/:/usr/local/flex/bin:/home/sneubardt/scriptorium:/usr/local/bin:/opt/NX/bin
+export PATH=$PATH:$JAVA_HOME/bin/:/usr/local/flex/bin:/home/sneubardt/scriptorium:/usr/local/bin:/opt/NX/bin
 
 #colorize less output, nice for man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
