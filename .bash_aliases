@@ -31,3 +31,5 @@ alias keylist='ssh-add -l'
 alias sps='sudo pacman -S'
 #alias pup='sudo pacman -Syu'
 alias pup='yaourt -Syu --aur'
+
+alias sqlplus='rlwrap sqlplus'
