@@ -18,6 +18,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders 
 
 import XMonad.Prompt
@@ -299,7 +300,7 @@ myLogHook = return ()
 -- It will add initialization of EWMH support to your custom startup
 -- hook by combining it with ewmhDesktopsStartup.
 --
-myStartupHook = return ()
+myStartupHook =  setWMName "LG3D" --so java gui apps will work
  
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
