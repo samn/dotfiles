@@ -32,7 +32,14 @@ set hidden
 set notimeout
 set ttimeout
 set timeoutlen=100
+set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
+set noautowrite "don't automagically write on :next
+set matchpairs+=<:>" add < and > to match pairs
+" Disable ALL bells
+set noerrorbells
+set visualbell t_vb=  
 "} 
+
 "ui{
 "set cursorline " highlight current line
 "set cursorcolumn " highlight the current column

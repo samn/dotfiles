@@ -40,7 +40,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export GREP_COLOR="1;33"
 
-export JAVA_HOME=/usr/local/jdk/
+export JAVA_HOME=/usr/local/jdk
 
 #so p4 automatically picks up the correct client
 export P4CONFIG=p4config.txt
