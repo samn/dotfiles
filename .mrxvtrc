@@ -1,0 +1,71 @@
+#
+# -----------------------------	TAB-BAR OPTIONS ------------------------------ #
+#
+
+Mrxvt.bottomTabbar:		True
+
+# Only show the tab bar if there is more than one tab.
+Mrxvt.autohideTabbar:		True
+
+# The number of tabs to attempt to keep visible. The width of tabs will shrink
+# to keep at least these many tabs visible.
+Mrxvt.minVisibleTabs:		8
+
+# Make the terminal title the same as the active tab title.
+Mrxvt.syncTabTitle:		True
+
+# Display the tab number in the title. Useful so that you can use Alt+digit to
+# quickly switch between tabs.
+Mrxvt.titleFormat:		%n. %t
+
+# Highlight inactive tabs only when they sound a bell (and not whenever they
+# produce output).
+Mrxvt.highlightTabOnBell:	True
+
+# Monitor tabs for activity or inactivity
+# (alternate arguments for MonitorTab macro : "INACTIVITY" / "ACTIVITY")
+Mrxvt.macro.Ctrl+Shift+g:		MonitorTab AUTO
+#Mrxvt.monitorTimeout:		 2000
+#Mrxvt.monitorCommand:           play ~/.ding_sound.wav
+#Mrxvt.monitorCommand:           aosd_cat --fontdesc="Trebuchet 20" --ypos=50 --delay=4000 Alert on tab %n :: %t
+
+#
+# ---------------------- SCROLLING / SCROLLBAR OPTIONS ----------------------- #
+#
+
+Mrxvt.scrollBar:		False
+
+# Number of lines to save in the scroll back buffer for all tabs
+Mrxvt.saveLines:		500
+
+# Don't scroll to the bottom every time some output is produced.
+Mrxvt.scrollTtyOutputInhibit:	True
+
+# Scroll to the bottom when a key is pressed.
+Mrxvt.scrollTtyKeypress:	True
+
+#
+# ---------------------------------- FONTS ----------------------------------- #
+#
+Mrxvt.xft:			1
+Mrxvt.xftFont:			terminus
+Mrxvt.xftSize:			8
+Mrxvt.xftAntialias:		1
+
+#
+# ------------------------------- MISC OPTIONS ------------------------------- #
+#
+
+# Display menu
+Mrxvt.showMenu:     False
+
+# Make double click select whole URL's
+Mrxvt.cutChars:			:=/~#@?%&_-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0abcdefghijklmnopqrstuvwxyz
+
+# Blank the mouse pointer on keystrokes or after 10 seconds of inactivity.
+Mrxvt.pointerBlank:		True
+Mrxvt.pointerBlankDelay:	10
+
+# Don't close the tab if the secondary screen is displayed (e.g. when running
+# vim).
+Mrxvt.protectSecondary:		True
