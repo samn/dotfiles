@@ -6,8 +6,10 @@ set nocompatible " explicitly get out of vi-compatible mode
 set noexrc " don't use local version of .(g)vimrc, .exrc
 colors darkblue
 set backup " make backup files
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp " directory to place swap files in
+" ending with the double slash includes the full path in the filename
+" of the swap files to avoid conflicts
+set backupdir=~/.vim/backup//
+set directory=~/.vim/tmp// " directory to place swap files in
 set tags+=~/.bctags
 set tags+=~/.jdktags
 syntax on
@@ -50,7 +52,6 @@ set hlsearch  "highlight all matched phrases, nohlsearch for inverse
 "set list " we do what to show tabs, to ensure we get them out of files
 "set listchars=tab:>-,trail:- " show tabs and trailing 
 set nostartofline " leave my cursor where it was with motion cmds
-set novisualbell " don't blink
 set number "line numbers
 set numberwidth=3
 hi LineNr ctermfg=white ctermbg=darkgreen
