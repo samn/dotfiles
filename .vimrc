@@ -18,7 +18,7 @@ syntax on
 "general{
 "when joining lines, leave cursor where it is
 set autoindent
-let c_comment_strings=1
+filetype plugin indent on " filetype based indents
 set cpoptions=q 
 set cinwords=if,else,while,do,for,switch,case
 set cindent
