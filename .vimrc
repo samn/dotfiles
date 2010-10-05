@@ -3,6 +3,7 @@ call pathogen#runtime_append_all_bundles() " init pathogen
 set modelines=0                  " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
+let g:LustyExplorerSuppressRubyWarning = 1
 set nocompatible " explicitly get out of vi-compatible mode
 set noexrc " don't use local version of .(g)vimrc, .exrc
 colors darkblue
