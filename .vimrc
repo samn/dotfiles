@@ -1,4 +1,5 @@
 "help from http://www.vi-improved.org/vimrc.php, http://github.com/dakrone/dakrone-dotfiles/blob/master/.vimrc
+call pathogen#runtime_append_all_bundles() " init pathogen
 set modelines=0                  " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
