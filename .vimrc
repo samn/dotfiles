@@ -113,5 +113,8 @@ map <C-l> <C-W>l
 nnoremap @p4a :!p4 add %:e
 nnoremap @p4e :!p4 edit %:e
 nnoremap @p4d :!p4 diff %
+
+" write current file with root privileges
+cmap w!! w !sudo tee % > /dev/null
 "}
 
