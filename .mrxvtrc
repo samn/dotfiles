@@ -21,6 +21,7 @@ Mrxvt.titleFormat:		%n. %t
 # Highlight inactive tabs only when they sound a bell (and not whenever they
 # produce output).
 Mrxvt.highlightTabOnBell:	True
+Mrxvt.visualBell:               False
 
 # Monitor tabs for activity or inactivity
 # (alternate arguments for MonitorTab macro : "INACTIVITY" / "ACTIVITY")

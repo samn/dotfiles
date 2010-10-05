@@ -15,7 +15,7 @@ alias df='df -h'
 alias top='htop'
 
 #safe copy and move
-alias mv='mv -i'
+#alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -I'
 
