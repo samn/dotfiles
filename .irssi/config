@@ -266,11 +266,14 @@ statusbar = {
   };
 };
 settings = {
-  core = {
+  core = { 
     real_name = "Unknown";
     user_name = "sneubardt";
     nick = "samn";
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };
-ignores = ( { level = "JOINS PARTS QUITS"; } );
+ignores = (
+  { level = "JOINS PARTS QUITS"; },
+  { level = "MODES"; channels = ( "&bitlbee" ); }
+);
