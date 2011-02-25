@@ -146,6 +146,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Deincrement the number of windows in the master area
     , ((modm .|. shiftMask, xK_period), sendMessage (IncMasterN (-1)))
 
+    -- Lock the screen with xscreensaver
+    , ((mod4Mask ,               xK_l     ), spawn "xscreensaver-command -lock")
+
     --Open the shell prompt
     --, ((modm, xK_p), shellPrompt myXPConfig)
 
