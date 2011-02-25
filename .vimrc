@@ -78,7 +78,6 @@ set expandtab
 "keybindings {
 "focus on cmd input when in command mode
 nnoremap <Space> : 
-" Bash-style keybindings
 map! <C-A> <Home>
 map! <C-E> <End>
 nmap <C-A> <Home>
@@ -119,3 +118,7 @@ nnoremap @p4d :!p4 diff %
 cmap w!! w !sudo tee % > /dev/null
 "}
 
+" Settings for VimClojure
+let vimclojure#HighlightContrib=1
+let vimclojure#DynamicHighlighting=1
+let vimclojure#ParenRainbow=1
