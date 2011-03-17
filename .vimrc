@@ -19,6 +19,7 @@ syntax on
 "general{
 "when joining lines, leave cursor where it is
 set autoindent
+filetype plugin on
 filetype plugin indent on " filetype based indents
 set cpoptions=q 
 set cinwords=if,else,while,do,for,switch,case
@@ -39,6 +40,7 @@ set timeoutlen=100
 "set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
 set noautowrite "don't automagically write on :next
 set matchpairs+=<:>" add < and > to match pairs
+runtime macros/matchit.vim
 " Disable ALL bells
 set noerrorbells
 set visualbell t_vb=  
