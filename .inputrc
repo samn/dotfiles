@@ -1,9 +1,6 @@
 # Search for partial matches in bash history
-# so $ <UP> goes to the previous command but
-#  $ s<UP> searches through history entries that start with s
-"\e[A":history-search-backward
-"\e[B":history-search-forward
-# Also works with C-p & C-n
+# so $ <C-p> goes to the previous command but
+#  $ s<C-p> searches through history entries that start with s
 "\C-p":history-search-backward
 "\C-n":history-search-forward
 
