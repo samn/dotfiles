@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/slime.vim"]
 	path = .vim/bundle/slime.vim
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule ".vim/bundle/surround"]
+	path = .vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
