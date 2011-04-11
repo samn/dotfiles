@@ -1,0 +1,20 @@
+[user]
+	name = Sam Neubardt
+	email = samneubardt@gmail.com
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+        renames = copies
+        mnemonicprefix = true
+
+[alias]
+        co = checkout
+        s = status
+        a = add
+        d = difftool
+        c = commit 
+        ca = commit -a
+        l = log
+[color]
+	ui = auto

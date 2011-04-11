@@ -33,3 +33,11 @@ alias sps='sudo pacman -S'
 alias pup='yaourt -Syu --aur'
 
 alias sqlplus='rlwrap sqlplus'
+
+g() {
+  if [[ $# == '0' ]]; then
+    git status
+  else
+    git "$@"
+  fi
+}
