@@ -1,5 +1,8 @@
 "help from http://www.vi-improved.org/vimrc.php, http://github.com/dakrone/dakrone-dotfiles/blob/master/.vimrc
 call pathogen#runtime_append_all_bundles() " init pathogen
+filetype off
+syntax on
+filetype plugin indent on " filetype based indents
 set modelines=0                  " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
@@ -14,13 +17,10 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/tmp// " directory to place swap files in
 set tags+=~/.bctags
 set tags+=~/.jdktags
-syntax on
 
 "general{
 "when joining lines, leave cursor where it is
 set autoindent
-filetype plugin on
-filetype plugin indent on " filetype based indents
 set cpoptions=q 
 set cinwords=if,else,while,do,for,switch,case
 set cindent
@@ -121,6 +121,8 @@ cmap w!! w !sudo tee % > /dev/null
 "}
 
 " Settings for VimClojure
+let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
+au Bufenter,Bufnewfile *.clj set shiftwidth=2 softtabstop=2 syntax=clojure
