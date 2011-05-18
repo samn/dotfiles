@@ -41,3 +41,12 @@ g() {
     git "$@"
   fi
 }
+                                                                                                                                                                                   
+# vim convenience bindings                                                                                                                                                         
+v() {                                                                                                                                                                              
+  vim -p "$@"                                                                                                                                                                      
+}                                                                                                                                                                                  
+                                                                                                                                                                                   
+vp() {                                                                                                                                                                             
+  vim -p *$@                                                                                                                                                                       
+} 
