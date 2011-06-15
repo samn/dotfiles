@@ -323,7 +323,7 @@ myPP = defaultPP { ppCurrent = xmobarColor "#AFAF87" "" . wrap "<" ">"
 --myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 
 -- Keybinding to toggle the gap for the bar.
-toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask .|. shiftMask, xK_b)
 
 --XMonad.Prompt configuration
 myXPConfig = defaultXPConfig { position = Top }
