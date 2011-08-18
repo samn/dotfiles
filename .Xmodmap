@@ -1,0 +1,6 @@
+clear Lock
+! remap capslock -> escape
+keycode 0x42 = Escape
+! volume hardkeys for thinkpad t420s
+keycode 114 = XF86AudioLowerVolume
+keycode 115 = XF86AudioRaiseVolume
