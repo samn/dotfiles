@@ -152,6 +152,7 @@ aliases = {
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
   RESET = "set -default";
+  bl = "clear;msg &bitlbee blist";
 };
 
 statusbar = {
