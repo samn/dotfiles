@@ -120,6 +120,11 @@ nnoremap @p4d :!p4 diff %
 cmap w!! w !sudo tee % > /dev/null
 "}
 
+" Supertab settings
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
+
 " Settings for VimClojure
 let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
