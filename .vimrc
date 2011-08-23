@@ -120,6 +120,15 @@ nnoremap @p4d :!p4 diff %
 cmap w!! w !sudo tee % > /dev/null
 "}
 
+" Eclim stuff
+let g:EclimJavaImportPackageSeparationLevel = 2
+function JavaImports()
+    :JavaImportMissing
+    :JavaImportClean
+    :JavaImportSort
+endfunction
+nnoremap <C-i> <esc>:call JavaImports()<cr>
+
 " Supertab settings
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
