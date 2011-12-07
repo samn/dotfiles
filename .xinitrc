@@ -9,4 +9,5 @@ numlockx &
 xmodmap ~/.Xmodmap
 xscreensaver -nosplash &
 exec xmonad
+~/scriptorium/toggle_display.sh
 ~/scriptorium/xwrits_init

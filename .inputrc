@@ -6,3 +6,6 @@
 
 # add a trailing '/' when tab completing a symlink
 set mark-symlinked-directories on
+
+# no bell please!
+set bell-style none

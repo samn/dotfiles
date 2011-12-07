@@ -6,6 +6,7 @@ alias ....='cd ../../..;ls;'
 alias ll='ls -lh;'
 alias lla='la -lAh'
 alias la='ls -A;'
+alias k='kill'
 alias ka='killall'
 alias sd='sudo shutdown -h now'
 alias grep='grep --color=auto'
@@ -32,7 +33,7 @@ alias sps='sudo pacman -S'
 #alias pup='sudo pacman -Syu'
 alias pup='yaourt -Syu --aur'
 
-alias sqlplus='rlwrap sqlplus'
+#alias sqlplus='rlwrap sqlplus'
 
 g() {
   if [[ $# == '0' ]]; then

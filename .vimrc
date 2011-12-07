@@ -120,6 +120,9 @@ nnoremap @p4d :!p4 diff %
 cmap w!! w !sudo tee % > /dev/null
 "}
 
+" make [d work for local definitions in Python files
+au FileType python setlocal define=^\s*\\(def\\\\/class\\)
+
 " Eclim stuff
 let g:EclimJavaImportPackageSeparationLevel = 2
 function JavaImports()

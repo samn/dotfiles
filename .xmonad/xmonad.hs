@@ -81,7 +81,7 @@ myModMask       = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+myWorkspaces    = [show x | x <- [1..9]]
  
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -146,8 +146,23 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Lock the screen with xscreensaver
     , ((mod4Mask ,               xK_l     ), spawn "xscreensaver-command -lock")
 
-    --Open the shell prompt
+    -- Open the shell prompt
     , ((modm, xK_p), shellPrompt myXPConfig)
+
+    -- Put the systen to sleep on fn+f7
+    , ((0,  0x1008FF2F), spawn "sudo pm-suspend")
+
+    -- -- audio lower
+    -- , ((0, 0x1008FF11), spawn "amixer set Master 5%- unmute")
+
+    -- -- audio raise
+    -- , ((0, 0x1008FF13), spawn "amixer set Master 5%+ unmute")
+
+    -- -- audio mute
+    -- , ((0, 0x1008FF12), spawn "amixer set Master toggle")
+
+    -- mpd play toggle
+    -- , ((0, 0x1008FF14), spawn "")
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
