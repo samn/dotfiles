@@ -125,6 +125,7 @@ au FileType python setlocal define=^\s*\\(def\\\\/class\\)
 
 " Eclim stuff
 let g:EclimJavaImportPackageSeparationLevel = 2
+let g:EclimXmlValidate = 0
 function JavaImports()
     :JavaImportMissing
     :JavaImportClean
