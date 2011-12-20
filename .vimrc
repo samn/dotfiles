@@ -7,9 +7,11 @@ set modelines=0                  " no modelines [http://www.guninski.com/vim1.ht
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
 let g:LustyExplorerSuppressRubyWarning = 1
+set background=dark
+colorscheme solarized
+colors darkblue
 set nocompatible " explicitly get out of vi-compatible mode
 set noexrc " don't use local version of .(g)vimrc, .exrc
-colors darkblue
 set backup " make backup files
 " ending with the double slash includes the full path in the filename
 " of the swap files to avoid conflicts
