@@ -146,3 +146,6 @@ let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 au Bufenter,Bufnewfile *.clj set shiftwidth=2 softtabstop=2 syntax=clojure
+
+" Two spaces for coffeescript please
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
