@@ -17,6 +17,7 @@
  
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ICCCMFocus
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders 
@@ -298,7 +299,7 @@ myEventHook = mempty
 -- It will add EWMH logHook actions to your custom log hook by
 -- combining it with ewmhDesktopsLogHook.
 --
-myLogHook = return ()
+myLogHook = takeTopFocus -- for swing applications
  
 ------------------------------------------------------------------------
 -- Startup hook
