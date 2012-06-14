@@ -44,10 +44,10 @@ g() {
 }
                                                                                                                                                                                    
 # vim convenience bindings                                                                                                                                                         
-v() {                                                                                                                                                                              
-  vim -p "$@"                                                                                                                                                                      
-}                                                                                                                                                                                  
-                                                                                                                                                                                   
-vp() {                                                                                                                                                                             
-  vim -p *$@                                                                                                                                                                       
-} 
+v() {
+  vim -p "$@"
+}
+
+vp() {
+  vim -p *$@
+}
