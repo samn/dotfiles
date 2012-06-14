@@ -16,5 +16,8 @@
         c = commit 
         ca = commit -a
         l = log
+	work = config user.email \"sneubardt@brightcove.com\"
 [color]
 	ui = auto
+[core]
+	excludesfile = /home/sneubardt/.gitignore_global
