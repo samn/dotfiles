@@ -15,7 +15,7 @@
         d = difftool
         c = commit 
         ca = commit -a
-        l = log
+        l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	work = config user.email \"sneubardt@brightcove.com\"
 [color]
 	ui = auto
