@@ -61,3 +61,5 @@ else
     eval `ssh-agent |head -n 2| tee $SSHAFILE`
     chmod 600 $SSHAFILE
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
