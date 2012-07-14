@@ -17,12 +17,6 @@ shopt -s checkwinsize
 #only have to tab once for possible completions
 set show-all-if-ambiguous on
 
-#even more pretty colors in ls
-eval `dircolors -b`
-
-#silence the fucking bell
-setterm -blength 0
-
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi

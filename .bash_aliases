@@ -15,11 +15,6 @@ alias egrep='egrep --color=auto'
 alias df='df -h'
 alias top='htop'
 
-#safe copy and move
-#alias mv='mv -i'
-alias cp='cp -i'
-alias rm='rm -I'
-
 #cd and ls hurrah
 c(){ cd "$@" && ls;}
 
@@ -27,13 +22,6 @@ c(){ cd "$@" && ls;}
 alias keyon="ssh-add -t 10800"
 alias keyoff='ssh-add -D'
 alias keylist='ssh-add -l'
-
-#pacman aliass
-alias sps='sudo pacman -S'
-#alias pup='sudo pacman -Syu'
-alias pup='yaourt -Syu --aur'
-
-#alias sqlplus='rlwrap sqlplus'
 
 g() {
   if [[ $# == '0' ]]; then
@@ -43,7 +31,7 @@ g() {
   fi
 }
                                                                                                                                                                                    
-# vim convenience bindings                                                                                                                                                         
+# vim convenience bindings
 v() {
   vim -p "$@"
 }
