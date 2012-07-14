@@ -22,7 +22,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 #path and envvars
-export PATH=$PATH:$JAVA_HOME/bin/:/home/sneubardt/bin:/home/sneubardt/scriptorium:/usr/local/bin:/opt/NX/bin
+export PATH=$PATH:~/bin
 
 #colorize less output, nice for man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -34,8 +34,6 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export GREP_COLOR="1;33"
 
-export TERM=xterm
-export JAVA_HOME=/usr/local/jdk
 export EDITOR=vim
 
 # aliases
