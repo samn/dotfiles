@@ -36,9 +36,7 @@ set wildmode=list:longest " turn on wild mode huge list
 " allowing buffer switch without write)
 set hidden
 " Speed up response to ESC key
-set notimeout
-set ttimeout
-set timeoutlen=100
+set noesckeys
 "set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
 set noautowrite "don't automagically write on :next
 set matchpairs+=<:>" add < and > to match pairs
