@@ -37,7 +37,7 @@ set wildmode=list:longest " turn on wild mode huge list
 set hidden
 " Speed up response to ESC key
 set noesckeys
-"set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
+set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
 set noautowrite "don't automagically write on :next
 set matchpairs+=<:>" add < and > to match pairs
 runtime macros/matchit.vim
