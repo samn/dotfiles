@@ -1,5 +1,5 @@
 #command aliases
-alias ls='ls --color=auto'
+alias ls='ls -FG'
 alias ..='cd ..;ls;'
 alias ...='cd ../..;ls;'
 alias ....='cd ../../..;ls;'
