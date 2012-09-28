@@ -17,8 +17,6 @@ set backup " make backup files
 " of the swap files to avoid conflicts
 set backupdir=~/.vim/backup//
 set directory=~/.vim/tmp// " directory to place swap files in
-set tags+=~/.bctags
-set tags+=~/.jdktags
 
 "general{
 "when joining lines, leave cursor where it is
@@ -111,10 +109,6 @@ map <C-l> <C-W>l
 "nmap H :s/\v(\S{8})/\1 /g<CR>:s/\v((\S{8} ){8})/\1<C-V><CR>/g<CR>:nohl<CR>
 "map <space> /
 "map <c-space> ?
-"p4 convenience bindings
-nnoremap @p4a :!p4 add %:e
-nnoremap @p4e :!p4 edit %:e
-nnoremap @p4d :!p4 diff %
 
 " write current file with root privileges
 cmap w!! w !sudo tee % > /dev/null
@@ -124,14 +118,14 @@ cmap w!! w !sudo tee % > /dev/null
 au FileType python setlocal define=^\s*\\(def\\\\/class\\)
 
 " Eclim stuff
-let g:EclimJavaImportPackageSeparationLevel = 2
-let g:EclimXmlValidate = 0
-function JavaImports()
-    :JavaImportMissing
-    :JavaImportClean
-    :JavaImportSort
-endfunction
-nnoremap <C-i> <esc>:call JavaImports()<cr>
+" let g:EclimJavaImportPackageSeparationLevel = 2
+" let g:EclimXmlValidate = 0
+" function JavaImports()
+"     :JavaImportMissing
+"     :JavaImportClean
+"     :JavaImportSort
+" endfunction
+" nnoremap <C-i> <esc>:call JavaImports()<cr>
 
 " Supertab settings
 let g:SuperTabDefaultCompletionType = "context"
@@ -143,6 +137,10 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
+let vimclojure#FuzzyIndent=1
+let vimclojure#WantNailgun=1
+let vimclojure#SplitPos="bottom"
+let vimclojure#SplitSize=10
 au Bufenter,Bufnewfile *.clj set shiftwidth=2 softtabstop=2 syntax=clojure
 
 " Two spaces for coffeescript please
