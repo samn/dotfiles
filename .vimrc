@@ -141,7 +141,7 @@ let vimclojure#FuzzyIndent=1
 let vimclojure#WantNailgun=1
 let vimclojure#SplitPos="bottom"
 let vimclojure#SplitSize=10
-au Bufenter,Bufnewfile *.clj set shiftwidth=2 softtabstop=2 syntax=clojure
+au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
 
 " Two spaces for coffeescript please
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
