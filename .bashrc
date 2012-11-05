@@ -44,14 +44,14 @@ export TERM=xterm
 export JAVA_HOME=/usr/local/jdk
 export EDITOR=vim
 
-#aliases
+# aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases 
 fi
 
-#brightcove specific stuff 
-if [ -f ~/.bc_bashrc ]; then
-    . ~/.bc_bashrc 
+# crashlytics specific stuff 
+if [ -f ~/.cls_bashrc ]; then
+    . ~/.cls_bashrc 
 fi
 
 SSHAFILE=/tmp/.$(whoami)-ssha
