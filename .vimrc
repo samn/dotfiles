@@ -35,7 +35,7 @@ set wildmode=list:longest " turn on wild mode huge list
 set hidden
 " Speed up response to ESC key
 set noesckeys
-set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
+"set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
 set noautowrite "don't automagically write on :next
 set matchpairs+=<:>" add < and > to match pairs
 runtime macros/matchit.vim
@@ -141,7 +141,9 @@ let vimclojure#FuzzyIndent=1
 let vimclojure#WantNailgun=1
 let vimclojure#SplitPos="bottom"
 let vimclojure#SplitSize=10
+let g:paredit_mode=0
 au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
 
 " Two spaces for coffeescript please
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost,Bufenter *.rb setl shiftwidth=2 softtabstop=2 expandtab tabstop=2

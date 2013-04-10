@@ -13,7 +13,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias df='df -h'
-alias top='htop'
+alias ffs='sudo $(fc -ln -1)'
 
 #cd and ls hurrah
 c(){ cd "$@" && ls;}
@@ -25,7 +25,7 @@ alias keylist='ssh-add -l'
 
 g() {
   if [[ $# == '0' ]]; then
-    git status
+    git s
   else
     git "$@"
   fi
