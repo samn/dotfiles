@@ -10,16 +10,31 @@
 
 [alias]
         co = checkout
-        s = status
+        s = status -sb
+        ss = status
         a = add
         d = difftool
         c = commit 
         ca = commit -a
         pr = pull --rebase
         pom = push origin master
+        br = branch 
         l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	work = config user.email \"sneubardt@brightcove.com\"
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+        filelog = log -u
+        fl = log -u
+        dl = "!git ll -1"
+        dlc = diff --cached HEAD^
+        # these take a revision
+        dr  = "!f() { git diff "$1"^.."$1"; }; f"
+        lc  = "!f() { git ll "$1"^.."$1"; }; f"
+        diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+        # http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+        f = "!git ls-files | grep -i"
+        # list aliases
+        la = "!git config -l | grep alias | cut -c 7-"
 [color]
 	ui = auto
 [core]
-	excludesfile = /home/sneubardt/.gitignore_global
+	excludesfile = ~/.gitignore_global
