@@ -32,7 +32,8 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'                                 
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-export GREP_COLOR="1;33"
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;35;40'
 
 export EDITOR=vim
 
@@ -55,3 +56,6 @@ else
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
