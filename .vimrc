@@ -143,6 +143,11 @@ let vimclojure#SplitPos="bottom"
 let vimclojure#SplitSize=10
 let g:paredit_mode=0
 au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
+" rainbow_parentheses.vim
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Two spaces for coffeescript please
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
