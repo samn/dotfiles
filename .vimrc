@@ -105,10 +105,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-"Reformat hex-dumps into 32-bit words, 8 words per line.
-"nmap H :s/\v(\S{8})/\1 /g<CR>:s/\v((\S{8} ){8})/\1<C-V><CR>/g<CR>:nohl<CR>
-"map <space> /
-"map <c-space> ?
 
 " write current file with root privileges
 cmap w!! w !sudo tee % > /dev/null
@@ -117,32 +113,15 @@ cmap w!! w !sudo tee % > /dev/null
 " make [d work for local definitions in Python files
 au FileType python setlocal define=^\s*\\(def\\\\/class\\)
 
-" Eclim stuff
-" let g:EclimJavaImportPackageSeparationLevel = 2
-" let g:EclimXmlValidate = 0
-" function JavaImports()
-"     :JavaImportMissing
-"     :JavaImportClean
-"     :JavaImportSort
-" endfunction
-" nnoremap <C-i> <esc>:call JavaImports()<cr>
-
 " Supertab settings
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
 let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
 
-" Settings for VimClojure
-let vimclojure#HighlightBuiltins=1
-let vimclojure#HighlightContrib=1
-let vimclojure#DynamicHighlighting=1
-let vimclojure#ParenRainbow=1
-let vimclojure#FuzzyIndent=1
-let vimclojure#WantNailgun=1
-let vimclojure#SplitPos="bottom"
-let vimclojure#SplitSize=10
+" Clojure!
 let g:paredit_mode=0
 au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
+
 " rainbow_parentheses.vim
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
