@@ -1,24 +1,27 @@
 [user]
 	name = Sam Neubardt
 	email = samneubardt@gmail.com
+	signingkey = 1027D43B
 [merge]
 	tool = vimdiff
 [diff]
 	tool = vimdiff
         renames = copies
         mnemonicprefix = true
+	compactionHeuristic = true
 
 [alias]
         co = checkout
         s = status -sb
         ss = status
         a = add
+        #  --staged
         d = difftool
-        c = commit 
+        c = commit
         ca = commit -a
         pr = pull --rebase
         pom = push origin master
-        br = branch 
+        br = branch
         l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
         ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
@@ -38,3 +41,12 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore_global
+        ignorecase = false
+
+[push]
+        default = nothing
+
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+[commit]
+	gpgsign = false
