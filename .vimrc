@@ -1,6 +1,5 @@
 set nocompatible " explicitly get out of vi-compatible mode
 "help from http://www.vi-improved.org/vimrc.php, http://github.com/dakrone/dakrone-dotfiles/blob/master/.vimrc
-call pathogen#runtime_append_all_bundles() " init pathogen
 filetype off
 syntax on
 filetype plugin indent on " filetype based indents
@@ -107,37 +106,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" write current file with root privileges
-cmap w!! w !sudo tee % > /dev/null
-"}
-
-" make [d work for local definitions in Python files
-au FileType python setlocal define=^\s*\\(def\\\\/class\\)
-
-set completefunc=.,w,b,u,t,i
-" Supertab settings
-let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
-let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
-
-" Clojure!
-let g:paredit_mode=0
-let g:clojure_fuzzy_indent_patterns = ['^fact*', '^against-background', 'map', 'flatmap', 'rescue', 'handle', 'service']
-au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
-
-" Thrift
-au BufNewFile,BufReadPost,Bufenter *.thrift setl shiftwidth=2 softtabstop=2 expandtab tabstop=2 syntax=thrift
-
-" rainbow_parentheses.vim
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" Coffeescript
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-au BufNewFile,BufReadPost,Bufenter *.rb setl shiftwidth=2 softtabstop=2 expandtab tabstop=2
-
 " STRIP TRAILING WHITESPACE ON SAVE
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -153,10 +121,6 @@ au BufNewFile,BufReadPost,Bufenter *.go setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufReadPost,Bufenter *.js setlocal ts=2 sw=2 sts=2
 au BufNewFile,BufReadPost,Bufenter *.jsx setlocal ts=2 sw=2 sts=2
 let g:jsx_ext_required = 0 " enable jsx syntax in non .jsx files
-
-"enable fzf
-set rtp+=~/.fzf
-map <C-p> :FZF<cr>
 
 inoremap <up> <nop>
 inoremap <down> <nop>
