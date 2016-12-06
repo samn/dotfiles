@@ -9,3 +9,5 @@
 *.iml
 .idea
 .DS_Store
+.ruby-version
+.ruby-gemset

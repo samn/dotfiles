@@ -50,3 +50,7 @@
         insteadOf = https://github.com/
 [commit]
 	gpgsign = false
+[remote "origin"]
+	prune = true
+[fetch]
+	prune = true

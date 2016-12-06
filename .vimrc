@@ -1,3 +1,4 @@
+set nocompatible " explicitly get out of vi-compatible mode
 "help from http://www.vi-improved.org/vimrc.php, http://github.com/dakrone/dakrone-dotfiles/blob/master/.vimrc
 call pathogen#runtime_append_all_bundles() " init pathogen
 filetype off
@@ -7,10 +8,9 @@ set modelines=0                  " no modelines [http://www.guninski.com/vim1.ht
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
 let g:LustyExplorerSuppressRubyWarning = 1
-set background=dark
-colorscheme solarized
-colors darkblue
-set nocompatible " explicitly get out of vi-compatible mode
+set background=light
+"colorscheme solarized
+"colors darkblue
 set noexrc " don't use local version of .(g)vimrc, .exrc
 set backup " make backup files
 " ending with the double slash includes the full path in the filename
@@ -21,28 +21,28 @@ set directory=~/.vim/tmp// " directory to place swap files in
 "general{
 "when joining lines, leave cursor where it is
 set autoindent
-set cpoptions=q 
-set cinwords=if,else,while,do,for,switch,case
-set cindent
+set cpoptions=q
+"set cinwords=if,else,while,do,for,switch,case
+"set cindent
 set backspace=indent,eol,start " make backspace a more flexible
-set iskeyword+=_,$,@,%,# " none of these are word dividers 
+set iskeyword+=_,$,@,%,# " none of these are word dividers
 " ignore these list file extensions
 set wildignore=*.o,*.obj,*.bak,*.pyc,
     \*.jpg,*.gif,*.png,*.class,*.d
 set wildmode=list:longest " turn on wild mode huge list
-" Keep cycled-away buffers open (preserving undo, 
+" Keep cycled-away buffers open (preserving undo,
 " allowing buffer switch without write)
 set hidden
 " Speed up response to ESC key
 set noesckeys
 "set nohidden  " close the buffer when I close a tab (I use tabs more than buffers)
 set noautowrite "don't automagically write on :next
-set matchpairs+=<:>" add < and > to match pairs
+"set matchpairs+=<:>" add < and > to match pairs
 runtime macros/matchit.vim
 " Disable ALL bells
 set noerrorbells
-set visualbell t_vb=  
-"} 
+set visualbell t_vb=
+"}
 
 "ui{
 "set cursorline " highlight current line
@@ -51,15 +51,15 @@ set incsearch "highlight as you type search phrase
 set hlsearch  "highlight all matched phrases, nohlsearch for inverse
 "set laststatus=2 " always show the status line
 "set lazyredraw " do not redraw while running macros
-"set list " we do what to show tabs, to ensure we get them out of files
-"set listchars=tab:>-,trail:- " show tabs and trailing 
+set list " we do want to show tabs, to ensure we get them out of files
+set listchars=tab:>-,trail:- " show tabs and trailing
 set nostartofline " leave my cursor where it was with motion cmds
 set number "line numbers
 set numberwidth=3
 hi LineNr ctermfg=white ctermbg=darkgreen
 set ruler " Always show current positions along the bottom
 set shortmess=aOstT " shortens messages to avoid 'press a key' prompt
-set showcmd " show the command being typed 
+set showcmd " show the command being typed
 set showmatch "matching braces
 "}
 
@@ -71,13 +71,13 @@ set infercase " case inferred by default
 set shiftround " when at 3 spaces, and I hit > ... go to 4, not 5
 set smartcase " if there are caps, go case-sensitive
 set shiftwidth=4
-set softtabstop=4 
+set softtabstop=4
 set expandtab
 "}
 
 "keybindings {
 "focus on cmd input when in command mode
-nnoremap <Space> : 
+nnoremap <Space> :
 map! <C-A> <Home>
 map! <C-E> <End>
 nmap <C-A> <Home>
@@ -86,9 +86,10 @@ nmap <C-M> gt
 nmap <C-N> gT
 nmap <C-\> <esc>:noh<cr>
 map <up> <ESC>:NERDTreeToggle<RETURN>
+noremap <Leader>r :NERDTreeFind<RETURN>
 "map <right> <ESC>:Tlist<RETURN>"for tag list
-map <right> <ESC>:bn<RETURN>
-map <left> <ESC>:bp<RETURN>
+"map <right> <ESC>:bn<RETURN>
+"map <left> <ESC>:bp<RETURN>
 "sick of hitting K by accident
 map K <nop>
 
@@ -113,14 +114,19 @@ cmap w!! w !sudo tee % > /dev/null
 " make [d work for local definitions in Python files
 au FileType python setlocal define=^\s*\\(def\\\\/class\\)
 
+set completefunc=.,w,b,u,t,i
 " Supertab settings
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
+"let g:SuperTabContextDefaultCompletionType = "<c-x><c-u>"
 let g:SuperTabContextTextOmniPrecedence = ['&completefunc', '&omnifunc']
 
 " Clojure!
 let g:paredit_mode=0
+let g:clojure_fuzzy_indent_patterns = ['^fact*', '^against-background', 'map', 'flatmap', 'rescue', 'handle', 'service']
 au Bufenter,Bufnewfile *.clj setl shiftwidth=2 softtabstop=2 syntax=clojure
+
+" Thrift
+au BufNewFile,BufReadPost,Bufenter *.thrift setl shiftwidth=2 softtabstop=2 expandtab tabstop=2 syntax=thrift
 
 " rainbow_parentheses.vim
 au VimEnter * RainbowParenthesesToggle
@@ -128,6 +134,31 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" Two spaces for coffeescript please
+" Coffeescript
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 au BufNewFile,BufReadPost,Bufenter *.rb setl shiftwidth=2 softtabstop=2 expandtab tabstop=2
+
+" STRIP TRAILING WHITESPACE ON SAVE
+autocmd BufWritePre * :%s/\s\+$//e
+
+" vim-go golang
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+au Bufenter,Bufnewfile *.go set nolist
+
+"au BufNewFile,BufReadPost,Bufenter *.go set listchars=trail:-
+au BufNewFile,BufReadPost,Bufenter *.go setlocal noet ts=4 sw=4 sts=4
+
+au BufNewFile,BufReadPost,Bufenter *.js setlocal ts=2 sw=2 sts=2
+au BufNewFile,BufReadPost,Bufenter *.jsx setlocal ts=2 sw=2 sts=2
+let g:jsx_ext_required = 0 " enable jsx syntax in non .jsx files
+
+"enable fzf
+set rtp+=~/.fzf
+map <C-p> :FZF<cr>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>

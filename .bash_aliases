@@ -14,6 +14,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias df='df -h'
 alias ffs='sudo $(fc -ln -1)'
+alias be='bundle exec'
 
 #cd and ls hurrah
 c(){ cd "$@" && ls;}
@@ -30,7 +31,9 @@ g() {
     git "$@"
   fi
 }
-                                                                                                                                                                                   
+alias fbranch='git co $(git branch | fzf)'
+
+alias vim='nvim'
 # vim convenience bindings
 v() {
   vim -p "$@"
