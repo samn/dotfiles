@@ -36,6 +36,7 @@ Plug 'tpope/vim-endwise'
 " Comment lines: gcc to comment current line, or select and then gc
 Plug 'tpope/vim-commentary'
 " Plug 'flowtype/vim-flow', { 'for': ['javascript', 'jsx'] }
+Plug 'machakann/vim-highlightedyank'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -98,6 +99,7 @@ set infercase " case inferred by default
 set shiftround " when at 3 spaces, and I hit > ... go to 4, not 5
 set smartcase " if there are caps, go case-sensitive
 set hlsearch  "highlight all matched phrases, nohlsearch for inverse
+set inccommand=nosplit "incremental "live" substitute
 
 " rainbow_parentheses.vim
 au VimEnter * RainbowParenthesesToggle
@@ -113,6 +115,9 @@ au BufNewFile,BufReadPost,Bufenter *.go setlocal nolist noet ts=4 sw=4 sts=4
 
 " enable jsx syntax in non .jsx files
 let g:jsx_ext_required = 0
+
+"vim-highlightedyank
+let g:highlightedyank_highlight_duration = 250
 
 "quicker window navigation:
 map <C-j> <C-W>j
