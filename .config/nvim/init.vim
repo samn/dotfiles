@@ -37,6 +37,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 " Plug 'flowtype/vim-flow', { 'for': ['javascript', 'jsx'] }
 Plug 'machakann/vim-highlightedyank'
+Plug 'mileszs/ack.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -134,7 +135,6 @@ nmap <C-E> <End>
 nmap <C-M> gt
 nmap <C-N> gT
 nmap <C-\> <esc>:noh<cr>
-noremap <Leader>a :Ag <cword><cr>
 map <up> <ESC>:NERDTreeToggle<RETURN>
 map <right> <ESC>:bn<RETURN>
 map <left> <ESC>:bp<RETURN>
@@ -166,3 +166,10 @@ endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
+" Use the_silver_searcher with ack.vim
+cnoreabbrev Ack Ack!
+" nnoremap <Leader>a :Ack!<Space>
+noremap <Leader>a :Ack! <cword><cr>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --smart-case'
+endif
