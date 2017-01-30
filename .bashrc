@@ -28,8 +28,8 @@ export PATH=$PATH:~/bin
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'                           
-export LESS_TERMCAP_so=$'\E[01;44;33m'                                 
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export GREP_OPTIONS='--color=auto'
@@ -39,12 +39,12 @@ export EDITOR=vim
 
 # aliases
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases 
+    . ~/.bash_aliases
 fi
 
-# crashlytics specific stuff 
+# crashlytics specific stuff
 if [ -f ~/.cls_bashrc ]; then
-    . ~/.cls_bashrc 
+    . ~/.cls_bashrc
 fi
 
 SSHAFILE=/tmp/.$(whoami)-ssha
@@ -55,7 +55,6 @@ else
     chmod 600 $SSHAFILE
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+[ -f ~/.git-completion.bash ] && source ~/.git-completion.bash
