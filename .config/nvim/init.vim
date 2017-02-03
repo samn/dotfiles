@@ -16,7 +16,8 @@ Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -37,7 +38,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 " Plug 'flowtype/vim-flow', { 'for': ['javascript', 'jsx'] }
 Plug 'machakann/vim-highlightedyank'
-Plug 'mileszs/ack.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -166,10 +166,7 @@ endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
-" Use the_silver_searcher with ack.vim
-cnoreabbrev Ack Ack!
-" nnoremap <Leader>a :Ack!<Space>
-noremap <Leader>a :Ack! <cword><cr>
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --smart-case'
-endif
+" Search through the CWD for the highlighted word with ag
+" The :Ag command comes from fzf.vim
+nnoremap <silent> <Leader>a :Ag <C-R><C-W><CR>
+
