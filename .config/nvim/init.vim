@@ -16,19 +16,19 @@ Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'guns/vim-clojure-static', { 'for': ['clojure'] }
-Plug 'kchmck/vim-coffee-script'
-Plug 'fatih/vim-go'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'coffeescript'] }
+Plug 'fatih/vim-go', { 'for': ['go', 'golang'] }
+Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx', 'javascript'] }
+Plug 'mxw/vim-jsx', { 'for': ['js', 'jsx', 'javascript'] }
 Plug 'othree/yajs.vim'
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown', 'md'] }
 " splitjoin:
 " gS to split a one-liner into multiple lines
 " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
@@ -42,13 +42,7 @@ Plug 'machakann/vim-highlightedyank'
 " Add plugins to &runtimepath
 call plug#end()
 
-"syntax enable
-"syntax on
-" colors darkblue
-" colorscheme gruvbox
 colorscheme solarized
-" set background=light
-
 
 set expandtab
 set smarttab
