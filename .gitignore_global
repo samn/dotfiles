@@ -8,3 +8,5 @@
 .project
 *.iml
 .idea
+**/node_modules/*
+.venv
