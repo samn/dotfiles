@@ -1,0 +1,13 @@
+# Enable with: systemctl enable i3lock@$USER
+[Unit]
+Description=i3lock on suspend
+Before=sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock
+
+[Install]
+WantedBy=sleep.target

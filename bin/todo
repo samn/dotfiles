@@ -1,0 +1,5 @@
+#!/bin/bash
+text=$(rofi -dpi 220 -dmenu -lines 0 -input /dev/null -p "Enter TODO > ")
+if [ ! -z "$text" ]; then
+  ~/go/bin/todoist add "$text"
+fi
